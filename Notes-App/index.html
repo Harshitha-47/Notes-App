@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="app-title">📝 My Notes</h1>
+        <div class="header-controls">
+            <button class="layout-toggle" id="layoutToggle">⊞</button>
+            <button class="add-note-btn" id="addNoteBtn">+ Add Note</button>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="notes-container" id="notesContainer">
+            <div class="empty-state" id="emptyState">
+                <h2>No notes yet</h2>
+                <p>Click "Add Note" to create your first note</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add New Note</h2>
+                <button class="close-btn" id="closeBtn">&times;</button>
+            </div>
+            <form class="note-form" id="noteForm">
+                <input type="text" id="noteTitle" placeholder="Enter note title..." required>
+                <textarea id="noteContent" placeholder="Write your note here..." required></textarea>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="save-btn" id="saveBtn">Save Note</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
